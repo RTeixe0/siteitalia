@@ -1,0 +1,98 @@
+/* Estilos Gerais */
+.logo-container img {
+    width: 250px;
+    margin: 0 auto;
+    display: block; 
+}
+
+.carousel-item img {
+    max-height: 40vh;
+    width: auto;
+    object-fit: cover;
+}
+
+/* Estilos da Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: row; 
+    background-color: #008C45; /* Verde da bandeira da Itália */
+}
+
+/* Links da Navbar */
+.navbar-nav .nav-item .nav-link {
+    color: #F4F4F4; /* Branco */
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item .nav-link:hover {
+    color: #CE2B37; /* Vermelho */
+}
+
+/* Marca da Navbar */
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050;
+    color: #F4F4F4; /* Branco */
+}
+
+/* Ícone de Navegação para Telas Menores (Hamburger) */
+.navbar-toggler {
+    border-color: #F4F4F4; /* Branco */
+}
+
+/* Logo Container */
+.logo-container {
+    position: absolute;
+    top: 50%; 
+    left: 10%; 
+    transform: translateY(-50%); 
+    z-index: 1050;
+}
+
+/* Titulo Itália Estilizado */
+.titulo-italia {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    font-size: 6rem; 
+    color: #F4ECE1; 
+    font-family: 'RomanSD', serif;
+    z-index: 20;
+    text-shadow: -1px -1px 0 #000,  
+                   1px -1px 0 #000,
+                  -1px 1px 0 #000,
+                   1px 1px 0 #000;
+}
+
+/* Fonte Customizada */
+@font-face {
+    font-family: 'RomanSD';
+    src: url('../fonts/Roman\ SD.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Responsividade da Navbar */
+@media (min-width: 992px) {
+    .navbar-nav {
+        justify-content: center;
+    }
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse.collapsing,
+    .navbar-collapse.show {
+        justify-content: flex-start; 
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23F4F4F4' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Ícone branco */
+    }
+}
