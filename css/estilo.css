@@ -59,6 +59,7 @@
 
 /* Titulo Itália Estilizado */
 .titulo-italia {
+    padding: 30px;
     margin-top: 20px;
     text-align: center;
     font-size: 6rem; 
@@ -96,4 +97,41 @@
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23F4F4F4' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Ícone branco */
     }
+}
+.container {
+    background-color: white;
+}
+
+ p {
+padding: 20px;
+text-align: justify;
+ }
+
+ /*estilos footer*/
+ footer{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 14px;
+    padding: 5px 0;
+    background-color: #CE2B37;
+    color: white;
+ }
+ 
+ footer ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 10px; /* Adiciona margem à esquerda e à direita da lista */
+}
+
+footer ul li {
+    margin: 0 5px; /* Adiciona margem entre os links */
+}
+
+footer p {
+    margin: 0 5px; /* Mantém os parágrafos próximos uns dos outros */
 }
