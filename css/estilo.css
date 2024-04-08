@@ -6,18 +6,20 @@
 }
 
 .carousel-item img {
-    max-height: 40vh;
+    max-height: 30vh;
     width: auto;
     object-fit: cover;
 }
 
 /* Estilos da Navbar */
 .navbar {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center; 
     flex-direction: row; 
-    background-color: #008C45; /* Verde da bandeira da Itália */
+    background-color: #008C45;
+    z-index: 30;
 }
 
 /* Links da Navbar */
@@ -34,8 +36,7 @@
 .navbar-brand {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    z-index: 1050;
+    z-index: 30;
     color: #F4F4F4; /* Branco */
 }
 
@@ -46,23 +47,18 @@
 
 /* Logo Container */
 .logo-container {
+    width: 35vh;
     position: absolute;
-    top: 50%; 
-    left: 10%; 
-    transform: translateY(-50%); 
-    z-index: 1050;
+    top: 23%;
+    z-index: 20;
+    height: auto;
 }
 
 /* Titulo Itália Estilizado */
 .titulo-italia {
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    transform: translateY(-50%);
     font-size: 6rem; 
     color: #F4ECE1; 
     font-family: 'RomanSD', serif;
-    z-index: 20;
     text-shadow: -1px -1px 0 #000,  
                    1px -1px 0 #000,
                   -1px 1px 0 #000,
