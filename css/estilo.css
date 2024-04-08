@@ -1,6 +1,6 @@
 /* Estilos Gerais */
 .logo-container img {
-    width: 250px;
+ 
     margin: 0 auto;
     display: block; 
 }
@@ -20,6 +20,9 @@
     flex-direction: row; 
     background-color: #008C45;
     z-index: 30;
+}
+.nav-item {
+    font-weight: bold;
 }
 
 /* Links da Navbar */
@@ -56,6 +59,8 @@
 
 /* Titulo Itália Estilizado */
 .titulo-italia {
+    margin-top: 20px;
+    text-align: center;
     font-size: 6rem; 
     color: #F4ECE1; 
     font-family: 'RomanSD', serif;
