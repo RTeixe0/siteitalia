@@ -152,6 +152,7 @@ h1{
 
 footer ul li {
     margin: 0 5px; /* Adiciona margem entre os links */
+    color: white;
 }
 
 footer p {
@@ -168,7 +169,7 @@ footer h2 {
     height: auto; /* Mantém a proporção da imagem */
     max-height: 400px; /* Altura máxima que você deseja para suas imagens */
     object-fit: cover; /* Garante que a imagem cubra o espaço designado sem perder a proporção */
-    border: 5px solid #000;
+    border: 2.5px solid #000;
   }
   .img-fluid {
     margin: 30px;
