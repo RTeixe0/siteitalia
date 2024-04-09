@@ -2,6 +2,19 @@
 body {
     background: linear-gradient(to right, #008C45,white, #D2232A);
 }
+p {
+    font-size: 20px; /* Tamanho da fonte */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin-bottom: 1rem; /* Espaçamento após parágrafos */
+    padding: 20px;
+    text-align: justify;
+ }
+ h2 {
+    margin-top: 5%;
+ }
+h1{
+    margin: 15px;
+}
 
 .logo-container img {
  
@@ -63,10 +76,9 @@ body {
 
 /* Titulo Itália Estilizado */
 .titulo-italia {
-    padding: 30px;
     margin-top: 20px;
     text-align: center;
-    font-size: 6rem; 
+    font-size: 4rem; 
     color: #F4ECE1; 
     font-family: 'RomanSD', serif;
     text-shadow: -1px -1px 0 #000,  
@@ -114,13 +126,6 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
- p {
-    font-size: 20px; /* Tamanho da fonte */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    margin-bottom: 1rem; /* Espaçamento após parágrafos */
-    padding: 20px;
-    text-align: justify;
- }
 
  /*estilos footer*/
  footer{
@@ -135,7 +140,9 @@ body {
     background-color: #CE2B37;
     color: white;
  }
- 
+ footer a{
+    color: white;
+ }
  footer ul {
     display: flex;
     list-style-type: none;
@@ -151,6 +158,9 @@ footer p {
     font-size: 12px;
     margin: 0 5px; /* Mantém os parágrafos próximos uns dos outros */
 }
+footer h2 {
+    padding: 20px;
+}
 
 /* imagem index*/
 .img-size-adjust {
@@ -159,5 +169,14 @@ footer p {
     max-height: 400px; /* Altura máxima que você deseja para suas imagens */
     object-fit: cover; /* Garante que a imagem cubra o espaço designado sem perder a proporção */
     border: 5px solid #000;
+  }
+  .img-fluid {
+    margin: 30px;
+  }
+  figcaption{
+    margin-top: -5%;
+    text-align: center;
+    font-size: 0.8rem; 
+    color: #666;
   }
   
