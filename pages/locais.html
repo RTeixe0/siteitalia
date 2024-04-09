@@ -164,7 +164,11 @@
   <script>
     function playAudio() {
       var audio = document.getElementById("myAudio");
-      audio.play();
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
     }
     </script>
 
