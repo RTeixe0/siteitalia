@@ -3,9 +3,9 @@ body {
     background: linear-gradient(to right, #008C45,white, #D2232A);
 }
 p {
-    font-size: 20px; /* Tamanho da fonte */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    margin-bottom: 1rem; /* Espaçamento após parágrafos */
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 1rem; 
     padding: 20px;
     text-align: justify;
  }
@@ -44,12 +44,11 @@ h1{
 
 /* Links da Navbar */
 .navbar-nav .nav-item .nav-link {
-    color: #F4F4F4; /* Branco */
+    color: #F4F4F4;
 }
-
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item .nav-link:hover {
-    color: #CE2B37; /* Vermelho */
+    color: #CE2B37;
 }
 
 /* Marca da Navbar */
@@ -57,7 +56,7 @@ h1{
     position: absolute;
     left: 50%;
     z-index: 30;
-    color: #F4F4F4; /* Branco */
+    color: #F4F4F4; 
 }
 
 /* Ícone de Navegação para Telas Menores (Hamburger) */
@@ -78,7 +77,7 @@ h1{
 .titulo-italia {
     margin-top: 20px;
     text-align: center;
-    font-size: 4rem; 
+    font-size: 12vh; 
     color: #F4ECE1; 
     font-family: 'RomanSD', serif;
     text-shadow: -1px -1px 0 #000,  
@@ -114,7 +113,7 @@ h1{
         justify-content: flex-start; 
     }
     .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23F4F4F4' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Ícone branco */
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23F4F4F4' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     }
 }
 .container {
@@ -147,28 +146,28 @@ h1{
     display: flex;
     list-style-type: none;
     padding: 0;
-    margin: 0 10px; /* Adiciona margem à esquerda e à direita da lista */
-}
+    margin: 0 10px;
+ }
 
 footer ul li {
-    margin: 0 5px; /* Adiciona margem entre os links */
+    margin: 0 5px; 
     color: white;
 }
 
 footer p {
     font-size: 12px;
-    margin: 0 5px; /* Mantém os parágrafos próximos uns dos outros */
+    margin: 0 5px; 
 }
 footer h2 {
     padding: 20px;
 }
 
-/* imagem index*/
+/* imagem*/
 .img-size-adjust {
-    width: 80%; /* Faz a imagem ocupar 100% da largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    max-height: 400px; /* Altura máxima que você deseja para suas imagens */
-    object-fit: cover; /* Garante que a imagem cubra o espaço designado sem perder a proporção */
+    width: 80%; 
+    height: auto; 
+    max-height: 400px; 
+    object-fit: cover;
     border: 2.5px solid #000;
   }
   .img-fluid {
