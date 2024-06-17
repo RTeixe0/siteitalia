@@ -70,7 +70,7 @@
 
     <h1 class="titulo-italia">Cadastro</h1>
 
-    <form action="caminho_para_script_de_processamento" method="POST">
+    <form action="cadastro_gravar.php" method="POST">
 
       <div class="form-group">
         <label for="nome">Nome:</label>

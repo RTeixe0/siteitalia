@@ -179,4 +179,27 @@ footer h2 {
     font-size: 0.8rem; 
     color: #666;
   }
+
+
+  .btn-login {
+    background-color: #008C45; /* Verde */
+    color: white; /* Texto branco */
+    border: none;
+}
+
+.btn-register {
+    background-color: #D2232A; /* Vermelho */
+    color: white; /* Texto branco */
+    border: none;
+}
+
+.login-register-container {
+    position: absolute; /* Mantém o elemento fixo na janela de visualização */
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    background: none;
+    border: none;
+}
+
   
