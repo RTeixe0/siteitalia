@@ -1,15 +1,8 @@
 <?php
 
-$host = '127.0.0.1';
-$db_name = 'siteitalia';
-$username = 'root';
-$password = '';
+include "../database/conection.php";  // Certifique-se de que a conexão PDO está configurada aqui
 
-$conn = new mysqli($host, $username, $password, $db_name);
-
-if ($conn->connect_error) {
-    die("Conexão falhou: " . $conn->connect_error);
-}
+$usuarioCadastrado = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -20,22 +13,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO usuarios (nome, email, usuario, senha) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO usuarios (nome, email, usuario, senha) VALUES (:nome, :email, :usuario, :senha)";
 
-    if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("ssss", $nome, $email, $usuario, $senhaHash);
+    try {
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':nome', $nome);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':usuario', $usuario);
+        $stmt->bindParam(':senha', $senhaHash);
         
         if ($stmt->execute()) {
-            echo "Usuário cadastrado com sucesso!";
+            $usuarioCadastrado = true;
         } else {
-            echo "Erro ao cadastrar usuário: " . $stmt->error;
+            echo "Erro ao cadastrar usuário.";
         }
-
-        $stmt->close();
-    } else {
-        echo "Erro ao preparar statement: " . $conn->error;
+    } catch (PDOException $e) {
+        echo "Erro ao preparar statement: " . $e->getMessage();
     }
 }
 
-$conn->close();
+$conn = null;  // Fechar a conexão PDO
+
+if ($usuarioCadastrado) {
+    echo "<script>
+            alert('Usuário cadastrado com sucesso!');
+            setTimeout(function() {
+                window.location.href = '../index.html';
+            }, 1000);
+          </script>";
+}
 ?>
