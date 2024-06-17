@@ -202,4 +202,46 @@ footer h2 {
     border: none;
 }
 
-  
+.form-centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente os itens filhos */
+    
+  }
+  .centralizado {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    width: 100%; /* Garante que o elemento ocupe a largura total do seu container */
+  }
+    
+/* Contêiner para os comentários */
+.comentarios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribui os itens uniformemente com espaço ao redor */
+    gap: 10px; /* Espaço entre os comentários */
+}
+
+/* Estilos para os comentários individuais */
+.comentario {
+    background-color: #fff; /* Fundo branco para destaque */
+    border: 1px solid #ccc; /* Borda sutil */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin: 5px; /* Reduz o espaçamento vertical */
+    padding: 10px; /* Reduz o espaçamento interno */
+    font-family: 'Arial', sans-serif; /* Fonte mais suave */
+    font-size: 14px; /* Tamanho de fonte menor */
+    color: #333; /* Cor de texto escura para melhor leitura */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para efeito 3D */
+    flex: 1 1 300px; /* Cresce e encolhe, base inicial de 300px */
+    max-width: 45%; /* Máximo de 45% da largura para que dois caibam em uma linha */
+}
+
+.comentario p {
+    line-height: 1.2; /* Espaçamento entre linhas mais compacto */
+    margin-bottom: 5px; /* Espaçamento reduzido entre parágrafos */
+}
+
+.comentario strong {
+    color: #008C45; /* Cor para destacar rótulos como Nome, Email, etc. */
+}
+
