@@ -1,0 +1,12 @@
+[
+    {
+        "nome": "Renan",
+        "email": "renan@renan.com",
+        "comentario": "Este é um exemplo de comentário."
+    },
+    {
+        "nome": "Julia",
+        "email": "renan@renan.com",
+        "comentario": "Outro comentário."
+    }
+]

@@ -1,6 +1,6 @@
 <?php
 
-include "../database/conection.php";  // Certifique-se de que a conexão PDO está configurada aqui
+include "../database/conection.php"; 
 
 $usuarioCadastrado = false;
 

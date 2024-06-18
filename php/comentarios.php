@@ -83,16 +83,20 @@ include "../database/conection.php";
           <a class="nav-link" href="../index.html">Início <span class="sr-only">(atual)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="cultura.html">Cultura</a>
+          <a class="nav-link" href="../pages/cultura.html">Cultura</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="gastronomia.html">Gastronomia</a>
+          <a class="nav-link" href="../pages/gastronomia.html">Gastronomia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="locais.html">Locais</a>
+          <a class="nav-link" href="../pages/locais.html">Locais</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="informacoes.html">Informaçoes</a>
+          <a class="nav-link" href="../pages/informacoes.html">Informaçoes</a>
+          <li class="nav-item">
+          <a class="nav-link" href="comentarios.php">Comentarios</a>
+        </li>
+
         </li>
       </ul>
     </div>

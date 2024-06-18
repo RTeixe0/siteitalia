@@ -120,10 +120,11 @@ h1{
     background-color: #f5f5f5;
     padding: 20px;
     border: 2px solid #000;
-    margin: 20px 0;
+    margin: 20px auto; /* Ajuste aqui */
     color: #333;
     font-family: 'Arial', sans-serif;
 }
+
 
 
  /*estilos footer*/
@@ -244,4 +245,3 @@ footer h2 {
 .comentario strong {
     color: #008C45; /* Cor para destacar rótulos como Nome, Email, etc. */
 }
-
