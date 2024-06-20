@@ -22,7 +22,7 @@ $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cultura</title>
+  <title>Administração de Comentários</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/estilo.css">
@@ -88,7 +88,7 @@ $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../index.html">Início <span class="sr-only">(atual)</span></a>
+          <a class="nav-link" href="../index.html">Início <span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="cultura.html">Cultura</a>
@@ -102,6 +102,10 @@ $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <li class="nav-item">
           <a class="nav-link" href="informacoes.html">Informaçoes</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="comentarios.php">Comentarios</a>
+        </li>
+
       </ul>
     </div>
   </nav>
@@ -111,23 +115,51 @@ $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   <div class="container mx-auto comentarios-container">
   <div class="row">
-    <div class="col-md-8 mx-auto"> <!-- Ajuste a largura conforme necessário -->
+    <div class="col-md-12 mx-auto">
       <h1 class="text-center mb-4">Administração de Comentários</h1>
-      <div class="list-group">
+
+      <div class="row">
+        <h2 class="col-12 text-center text-danger">Aguardando Aprovação</h2>
         <?php foreach ($comments as $row): ?>
-          <div class="list-group-item">
-            <h5 class="mb-1"><?php echo htmlspecialchars($row['nome']); ?></h5>
-            <p class="mb-1"><?php echo htmlspecialchars($row['comentario']); ?></p>
-            <small>Postado em: <?php echo htmlspecialchars($row['data_hora']); ?></small>
-            <p class="mb-1" style="color: <?= $row['aprovado'] == 0 ? 'red' : 'green'; ?>">
-              <?= $row['aprovado'] == 0 ? 'Aguardando aprovação' : 'Aprovado'; ?>
-            </p>
-            <a href="comment_actions.php?action=approve&id=<?php echo $row['id']; ?>" class="btn btn-success">Aprovar</a>
-            <a href="comment_actions.php?action=reject&id=<?php echo $row['id']; ?>" class="btn btn-danger">Rejeitar</a>
-          </div>
+          <?php if ($row['aprovado'] == 0): ?>
+            <div class="col-md-6 col-lg-4">
+              <div class="list-group-item">
+                <h5 class="mb-1"><?php echo htmlspecialchars($row['nome']); ?></h5>
+                <p class="mb-1"><?php echo htmlspecialchars($row['comentario']); ?></p>
+                <small>Postado em: <?php echo htmlspecialchars($row['data_hora']); ?></small>
+                <p class="mb-1 text-danger">Aguardando aprovação</p>
+                <a href="comment_actions.php?action=approve&id=<?php echo $row['id']; ?>" class="btn btn-success">Aprovar</a>
+                <a href="comment_actions.php?action=reject&id=<?php echo $row['id']; ?>" class="btn btn-danger">Rejeitar</a>
+              </div>
+            </div>
+          <?php endif; ?>
         <?php endforeach; ?>
       </div>
-      <div class="upload-container">
+
+      <div class="w-100 my-4 border-top"></div> <!-- Adiciona uma borda no topo -->
+
+      <div class="row">
+        <h2 class="col-12 text-center text-success">Aprovados</h2>
+        <?php foreach ($comments as $row): ?>
+          <?php if ($row['aprovado'] == 1): ?>
+            <div class="col-md-6 col-lg-4">
+              <div class="list-group-item">
+                <h5 class="mb-1"><?php echo htmlspecialchars($row['nome']); ?></h5>
+                <p class="mb-1"><?php echo htmlspecialchars($row['comentario']); ?></p>
+                <small>Postado em: <?php echo htmlspecialchars($row['data_hora']); ?></small>
+                <p class="mb-1 text-success">Aprovado</p>
+                <a href="comment_actions.php?action=reject&id=<?php echo $row['id']; ?>" class="btn btn-danger">Rejeitar</a>
+              </div>
+            </div>
+          <?php endif; ?>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="upload-container container">
   <h2>Upload de Comentários JSON</h2>
   <form action="upload_comments.php" method="post" enctype="multipart/form-data">
     Selecione o arquivo JSON:
@@ -140,19 +172,8 @@ $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </div>
 </div>
 
-<div class="upload-container">
-  <h2>Upload de Comentários JSON</h2>
-  <form action="upload_comments.php" method="post" enctype="multipart/form-data">
-    Selecione o arquivo JSON:
-    <input type="file" name="jsonFile" accept=".json">
-    <button type="submit" class="btn btn-primary">Upload</button>
-  </form>
-</div>
 
 
-
-
-    <!-- Footer com Direitos Autorais e Links -->
     <footer>
       <div class="d-flex justify-content-center align-items-center flex-wrap">
         <p>&copy; 2024 Renan Teixeira. Todos os direitos reservados.</p>
@@ -162,7 +183,6 @@ $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
       </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

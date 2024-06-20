@@ -80,7 +80,7 @@ include "../database/conection.php";
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../index.html">Início <span class="sr-only">(atual)</span></a>
+          <a class="nav-link" href="../index.html">Início <span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../pages/cultura.html">Cultura</a>
@@ -93,7 +93,7 @@ include "../database/conection.php";
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../pages/informacoes.html">Informaçoes</a>
-          <li class="nav-item">
+          <li class="nav-item active">
           <a class="nav-link" href="comentarios.php">Comentarios</a>
         </li>
 
@@ -102,7 +102,6 @@ include "../database/conection.php";
     </div>
   </nav>
 
-<!-- Comentários Existentes -->
 <div class="container mx-auto comentarios-container">
     <h2 class="centralizado">Comentários</h2>
     <?php
@@ -124,7 +123,6 @@ include "../database/conection.php";
 
 
 
-    <!-- Formulário de Comentários -->
     <div class="container mx-auto " style="padding-left: 0; padding-right: 0;">
         <h2 class="centralizado">Deixe seu Comentário</h2>
         <form action="../php/enviar_comentario.php" method="post" class="form-centrado">
@@ -144,7 +142,6 @@ include "../database/conection.php";
       </form>
     </div>
 
-    <!-- Footer com Direitos Autorais e Links -->
     <footer>
       <div class="d-flex justify-content-center align-items-center flex-wrap">
         <p>&copy; 2024 Renan Teixeira. Todos os direitos reservados.</p>
@@ -154,7 +151,6 @@ include "../database/conection.php";
       </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

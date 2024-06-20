@@ -7,7 +7,7 @@ CREATE TABLE usuarios (
     email VARCHAR(255) NOT NULL UNIQUE,
     usuario VARCHAR(255) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL
-)
+);
 
 CREATE TABLE comentarios (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
@@ -15,5 +15,5 @@ CREATE TABLE comentarios (
     email VARCHAR(100),
     comentario TEXT,
     data_hora DATETIME,
-    aprovado INT(1) DEFAULT = 0
+    aprovado INT(1) DEFAULT 0
 );
